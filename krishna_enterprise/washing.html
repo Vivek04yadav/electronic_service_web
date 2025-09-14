@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Washing Machine Services - Krishna Enterprise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="static/styles.css"/>
+</head>
+<body>
+
+  <nav class="navbar navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center text-primary fw-bold" href="index.html">
+        <img src="static/logo.png" alt="Logo" style="height: 40px;" class="me-2" />
+        Krishna Enterprise
+      </a>
+    </div>
+  </nav>
+
+  <section class="hero-section py-5">
+    <div class="container text-center">
+      <h1 class="hero-title">Washing Machine Services</h1>
+      <p class="hero-subtitle">Front-load and top-load machine services</p>
+    </div>
+  </section>
+
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-card p-4 text-center">
+          <i class="fas fa-sync-alt fa-2x text-primary mb-3"></i>
+          <h4>Drum Cleaning</h4>
+          <p>Removes scale, mold and odors from drum & filter.</p>
+          <div class="service-price mb-3">₹699</div>
+          <button class="btn btn-primary w-100" onclick="bookService('Drum Cleaning')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card p-4 text-center">
+          <i class="fas fa-cogs fa-2x text-primary mb-3"></i>
+          <h4>Motor Repair</h4>
+          <p>Repair or replace faulty motor and spinning issues.</p>
+          <div class="service-price mb-3">₹999</div>
+          <button class="btn btn-primary w-100" onclick="bookService('Motor Repair')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card p-4 text-center">
+          <i class="fas fa-wrench fa-2x text-primary mb-3"></i>
+          <h4>Installation</h4>
+          <p>Machine placement, plumbing & electrical setup.</p>
+          <div class="service-price mb-3">₹499</div>
+          <button class="btn btn-primary w-100" onclick="bookService('Washing Machine Installation')">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function bookService(serviceName) {
+      localStorage.setItem('selectedService', serviceName);
+      window.location.href = 'booking.html';
+    }
+  </script>
+
+</body>
+</html>

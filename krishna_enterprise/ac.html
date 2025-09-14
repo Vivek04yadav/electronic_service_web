@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AC Services - Krishna Enterprise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="static/styles.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center text-primary fw-bold" href="index.html">
+        <img src="static/logo.png" alt="Logo" style="height: 40px;" class="me-2" />
+        Krishna Enterprise
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section py-5">
+    <div class="container text-center">
+      <h1 class="hero-title">AC Services</h1>
+      <p class="hero-subtitle">Choose from a wide range of AC services for your comfort</p>
+    </div>
+  </section>
+
+  <!-- AC Services Grid -->
+  <section class="py-5">
+    <div class="container">
+      <h3 class="mb-4">Split AC Services</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card p-4 text-center">
+            <i class="fas fa-wind fa-2x text-primary mb-3"></i>
+            <h5>Split AC Gas Refill</h5>
+            <p>Includes leak test, vacuum, pressure & gas charging.</p>
+            <div class="service-price mb-3">₹1499</div>
+            <button class="btn btn-primary w-100" onclick="bookService('Split AC Gas Refill')">Book Now</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-4 text-center">
+            <i class="fas fa-shower fa-2x text-primary mb-3"></i>
+            <h5>Split AC Deep Cleaning</h5>
+            <p>Jet cleaning for coils, filters & blower. Includes both units.</p>
+            <div class="service-price mb-3">₹899</div>
+            <button class="btn btn-primary w-100" onclick="bookService('Split AC Deep Cleaning')">Book Now</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-4 text-center">
+            <i class="fas fa-tools fa-2x text-primary mb-3"></i>
+            <h5>Split AC Installation</h5>
+            <p>Mounting, copper piping, insulation & drainage setup.</p>
+            <div class="service-price mb-3">₹1199</div>
+            <button class="btn btn-primary w-100" onclick="bookService('Split AC Installation')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+
+      <h3 class="mb-4">Window AC Services</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card p-4 text-center">
+            <i class="fas fa-snowflake fa-2x text-primary mb-3"></i>
+            <h5>Window AC Service</h5>
+            <p>Comprehensive cleaning of coil, filter & fan.</p>
+            <div class="service-price mb-3">₹649</div>
+            <button class="btn btn-primary w-100" onclick="bookService('Window AC Service')">Book Now</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-4 text-center">
+            <i class="fas fa-thermometer-half fa-2x text-primary mb-3"></i>
+            <h5>Window AC Gas Refill</h5>
+            <p>Refilling with pressure & cooling test. R22 / R32 / R410A supported.</p>
+            <div class="service-price mb-3">₹1399</div>
+            <button class="btn btn-primary w-100" onclick="bookService('Window AC Gas Refill')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+
+      <h3 class="mb-4">Inverter AC Services</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card p-4 text-center">
+            <i class="fas fa-bolt fa-2x text-primary mb-3"></i>
+            <h5>Inverter AC Repair</h5>
+            <p>PCB testing, sensor issue diagnosis, and parts replacement.</p>
+            <div class="service-price mb-3">₹899+</div>
+            <button class="btn btn-primary w-100" onclick="bookService('Inverter AC Repair')">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function bookService(serviceName) {
+      localStorage.setItem('selectedService', serviceName);
+      window.location.href = 'booking.html';
+    }
+  </script>
+
+</body>
+</html>
